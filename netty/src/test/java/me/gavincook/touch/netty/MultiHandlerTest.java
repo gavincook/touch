@@ -5,26 +5,26 @@
 package me.gavincook.touch.netty;
 
 import me.gavincook.touch.netty.client.EchoClient;
-import me.gavincook.touch.netty.server.EchoServer;
+import me.gavincook.touch.netty.server.MultiHandlerServer;
 import org.testng.annotations.Test;
 
 /**
- * echo 服务端+ echo 客户端测试
+ * 多handler处理器服务端+ echo 客户端测试
  *
  * @author gavincook
- * @version $ID: EchoTest.java, v0.1 2018-05-04 17:13 gavincook Exp $$
+ * @version $ID: MultiHandlerTest.java, v0.1 2018-05-04 17:13 gavincook Exp $$
  */
-public class EchoTest {
+public class MultiHandlerTest {
 
     @Test
-    public void testEcho() throws InterruptedException {
-        EchoServer echoServer = new EchoServer();
+    public void testMultiHandler() throws InterruptedException {
+        MultiHandlerServer server = new MultiHandlerServer();
         EchoClient echoClient = new EchoClient();
 
         //先启动服务器
         new Thread(() -> {
             try {
-                echoServer.start();
+                server.start();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -46,7 +46,7 @@ public class EchoTest {
         Thread.sleep(2000);
 
         echoClient.stop();
-        echoServer.stop();
+        server.stop();
     }
 
 }
