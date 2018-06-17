@@ -30,6 +30,7 @@ public class FirstServerInHandler extends SimpleChannelInboundHandler<ByteBuf> {
 
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
+        //一定要刷新，否则写入的监听器得到的结果为false。
         ctx.writeAndFlush(Unpooled.EMPTY_BUFFER).addListener(ChannelFutureListener.CLOSE);
     }
 }

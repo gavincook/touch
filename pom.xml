@@ -16,5 +16,7 @@
 
     <modules>
         <module>netty</module>
+        <module>jfinal</module>
+        <module>spring</module>
     </modules>
 </project>
