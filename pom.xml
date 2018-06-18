@@ -18,5 +18,10 @@
         <module>netty</module>
         <module>jfinal</module>
         <module>spring</module>
+        <module>spring-cloud/eureka</module>
+        <module>spring-cloud/server</module>
+        <module>spring-cloud/client-direct</module>
+        <module>spring-cloud/client-load-balance</module>
+        <module>spring-cloud/client-feign</module>
     </modules>
 </project>
