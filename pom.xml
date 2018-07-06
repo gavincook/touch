@@ -23,5 +23,6 @@
         <module>spring-cloud/client-direct</module>
         <module>spring-cloud/client-load-balance</module>
         <module>spring-cloud/client-feign</module>
+        <module>gts</module>
     </modules>
 </project>
